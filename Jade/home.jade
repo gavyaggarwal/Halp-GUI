@@ -16,7 +16,16 @@ html(lang="en")
     title= pageTitle
     link(href='css/home.css', rel='stylesheet', type='text/css')
   body
-    #header
+    #header 
+      a.title(href='home.html') Insert Logo Here
+      .menu
+        a(href='home.html') Home
+        .separator
+        a(href='home.html') Streams
+        .separator
+        a(href='home.html') Account
+        .separator
+        a(href='home.html') Sign Out
     #container
       .suggestions
         h2 Currently Streaming
@@ -24,5 +33,16 @@ html(lang="en")
         if suggestions.length
           each val in suggestions
             +suggestions-video(val)
-        else
-          .no-content There's no content available at this time. Please try again later.
+          else
+            .no-content There's no content available at this time. Please try again later.
+      .suggestions
+        h2 Top Lectures
+        - var suggestions = [{"title":"General Relativity, Special Relativity, and Gravitational Waves","topic":"Physics","author":"ProfessorBrown","viewers":2342,"thumbnail":"http://i.kinja-img.com/gawker-media/image/upload/s--wkHbNfCf--/191sbt8dnldc8jpg.jpg","videoURL":"video.html","topicURL":"topic/physics","authorURL":"user/professor_brown"},{"title":"Darwin's Theory of Evolution","topic":"Biology","author":"Mr. Anderson","viewers":434,"thumbnail":"http://www.ucalgary.ca/admissions/files/admissions/biosci.jpg","videoURL":"video.html","topicURL":"topic/biology","authorURL":"user/janderson"},{"title":"Method Overloading in Java (AP Computer Science)","topic":"Computer Science","author":"Edward Jones","viewers":984,"thumbnail":"http://blog.clearadmit.com/files/2014/07/coding.jpg","videoURL":"video.html","topicURL":"topic/cs","authorURL":"user/edwardj"},{"title":"How to Finish the Frontend of Halp","topic":"Computer Science","author":"Gavy","viewers":3289,"thumbnail":"http://gdj.gdj.netdna-cdn.com/wp-content/uploads/2011/03/colorful-photos-9.jpg","videoURL":"video.html","topicURL":"topic/cs","authorURL":"user/gavy"},{"title":"Lorem ipsum dolor sit amet","topic":"Lorem ipsum","author":"dolor sit amet","viewers":23,"thumbnail":"http://i.kinja-img.com/gawker-media/image/upload/s--wkHbNfCf--/191sbt8dnldc8jpg.jpg","videoURL":"video.html","topicURL":"topic/cs","authorURL":"user/gavy"},{"title":"Lorem ipsum dolor sit amet","topic":"Lorem ipsum","author":"dolor sit amet","viewers":23,"thumbnail":"http://www.ucalgary.ca/admissions/files/admissions/biosci.jpg","videoURL":"video.html","topicURL":"topic/cs","authorURL":"user/gavy"}];
+        if suggestions.length
+          each val in suggestions
+            +suggestions-video(val)
+          else
+            .no-content There's no content available at this time. Please try again later.
+
+#footer This is the GUI for Halp Beta (written by Gavy Aggarwal)
+      
