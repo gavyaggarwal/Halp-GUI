@@ -1,0 +1,114 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+body {
+  font-family: 'Lato', sans-serif;
+  background: url('../images/background.png');
+  margin: 0px;
+  padding: 0px;
+  color: #111111;
+}
+.small-caps {
+  font-variant: small-caps;
+}
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#header {
+  width: 100%;
+  height: 50px;
+  background: red;
+}
+#container .suggestions {
+  background: #FFF;
+  border: 1px solid #CCC;
+  margin: 50px auto;
+  padding: 10px 0px;
+  text-align: center;
+  width: 80%;
+}
+#container .suggestions h2 {
+  font-weight: 300;
+  font-size: 1.1em;
+  margin: 0px;
+  padding: 0px;
+}
+#container .suggestions .no-content {
+  height: 50px;
+  line-height: 50px;
+}
+#container .suggestions .suggestions-video {
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  vertical-align: top;
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  margin: 18px 4px 0px 4px;
+  border: 1px solid #EEE;
+  overflow: hidden;
+}
+#container .suggestions .suggestions-video .thumbnail {
+  background-color: #000;
+  width: 100%;
+  font-size: 0px;
+  display: inline-block;
+}
+#container .suggestions .suggestions-video .thumbnail img {
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  width: 100%;
+  opacity: 0.5;
+  height: 150px;
+}
+#container .suggestions .suggestions-video .title {
+  display: inline-block;
+  width: 290px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#container .suggestions .suggestions-video a {
+  text-decoration: none;
+  color: #111111;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -o-transition: color 0.4s;
+}
+#container .suggestions .suggestions-video a:hover {
+  text-decoration: underline;
+}
+#container .suggestions .suggestions-video .details {
+  display: inline-block;
+  width: 290px;
+  font-size: 0.8em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#container .suggestions .suggestions-video .details .separator {
+  background: #444444;
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  margin: 0px 5px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+#container .suggestions .suggestions-video:hover {
+  background-color: #FEFEFE;
+}
+#container .suggestions .suggestions-video:hover .thumbnail img {
+  opacity: 1.0;
+}
+#container .suggestions .suggestions-video:hover a {
+  color: #0707a0;
+}
+#container .suggestions .suggestions-video:hover a:hover {
+  color: #111111;
+}
