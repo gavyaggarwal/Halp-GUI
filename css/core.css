@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+body {
+  font-family: 'Lato', sans-serif;
+  background: url('../images/background.png');
+  margin: 0px;
+  padding: 0px;
+  color: #111111;
+}
+.small-caps {
+  font-variant: small-caps;
+}
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+#header {
+  height: 50px;
+  background: #007aff;
+  padding: 0px 50px;
+  margin: 0px;
+  /*position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1;*/
+  box-shadow: 0px 0px 5px #919191;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#header a {
+  color: #fefefe;
+  text-decoration: none;
+}
+#header .title {
+  color: #fefefe;
+  font-size: 24px;
+  line-height: 50px;
+}
+#header .menu {
+  color: #fefefe;
+  font-size: 18px;
+  line-height: 50px;
+}
+#header .menu .separator {
+  display: inline-block;
+  width: 0px;
+  margin: 0px 10px;
+}
+#footer {
+  text-align: center;
+  margin: 5px;
+}

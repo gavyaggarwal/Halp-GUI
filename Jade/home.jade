@@ -13,19 +13,10 @@ mixin suggestions-video(data)
 doctype html
 html(lang="en")
   head
-    title= pageTitle
+    title pageTitle
     link(href='css/home.css', rel='stylesheet', type='text/css')
   body
-    #header 
-      a.title(href='home.html') Insert Logo Here
-      .menu
-        a(href='home.html') Home
-        .separator
-        a(href='home.html') Streams
-        .separator
-        a(href='home.html') Account
-        .separator
-        a(href='home.html') Sign Out
+    include header.jade
     #container
       .suggestions
         h2 Currently Streaming
@@ -43,6 +34,5 @@ html(lang="en")
             +suggestions-video(val)
           else
             .no-content There's no content available at this time. Please try again later.
-
-#footer This is the GUI for Halp Beta (written by Gavy Aggarwal)
+    include footer.jade
       
