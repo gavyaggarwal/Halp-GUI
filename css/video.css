@@ -1,0 +1,299 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+body {
+  font-family: 'Lato', sans-serif;
+  background: url('../images/background.png');
+  margin: 0px;
+  padding: 0px;
+  color: #111111;
+}
+.small-caps {
+  font-variant: small-caps;
+}
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.boxsizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+#header {
+  height: 50px;
+  background: #007aff;
+  padding: 0px 50px;
+  margin: 0px;
+  /*position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1;*/
+  box-shadow: 0px 0px 5px #919191;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#header a {
+  color: #fefefe;
+  text-decoration: none;
+}
+#header .title {
+  color: #fefefe;
+  font-size: 24px;
+  line-height: 50px;
+}
+#header .menu {
+  color: #fefefe;
+  font-size: 18px;
+  line-height: 50px;
+}
+#header .menu .separator {
+  display: inline-block;
+  width: 0px;
+  margin: 0px 10px;
+}
+#footer {
+  text-align: center;
+  margin: 5px;
+}
+#container #video-box,
+#container #comment-box {
+  background: #FFF;
+  border: 1px solid #CCC;
+  margin: 50px auto;
+  padding: 0px;
+  text-align: left;
+  width: 80%;
+  /*.suggestions-video {
+      .transition(background-color 0.4s);
+      vertical-align:top;
+      width:300px;
+      height:200px;
+      display:inline-block;
+      margin:18px 4px 0px 4px;
+      border:1px solid #EEE;
+      overflow:hidden;
+      .thumbnail {
+        background-color:#000;
+        width:100%;
+        font-size:0px;
+        display:inline-block;
+        img {
+          .transition(opacity 0.4s);
+          width:100%;
+          opacity:0.5;
+          height:150px;
+        }
+      }
+      .title {
+        display:inline-block;
+        width:290px;
+        .ellipsis;
+      }
+      a {
+        text-decoration:none;
+        color:@color;
+        .transition(color 0.4s);
+        &:hover {
+          text-decoration:underline;
+        }
+      }
+      .details {
+        display:inline-block;
+        width:290px;
+        font-size:0.8em;
+        .ellipsis;
+        .separator {
+          background:lighten(@color, 20%);
+          width:4px;
+          height:4px;
+          display:inline-block;
+          margin:0px 5px;
+          border-radius:2px;
+          vertical-align:middle;
+        }
+      }
+      &:hover {
+        background-color:#FEFEFE;
+        .thumbnail img {
+          opacity:1.0;
+        }
+        a {
+          color:mix(@color, @theme, 40%);
+          &:hover {
+            color:@color;
+          }
+        }
+      }
+    }*/
+}
+#container #video-box #player,
+#container #comment-box #player {
+  width: 100%;
+  background: #111111;
+}
+#container #video-box #player .error,
+#container #comment-box #player .error {
+  padding: 20px;
+}
+#container #video-box h2,
+#container #comment-box h2 {
+  font-weight: 300;
+  font-size: 1.4em;
+  margin: 0px;
+  padding: 10px;
+}
+#container #video-box h3,
+#container #comment-box h3 {
+  font-weight: 300;
+  font-size: 1.1em;
+  margin: 0px;
+  padding: 0px 10px 10px 10px;
+}
+#container #video-box h3 a,
+#container #comment-box h3 a {
+  text-decoration: none;
+  color: #111111;
+}
+#container #video-box h3 a:hover,
+#container #comment-box h3 a:hover {
+  text-decoration: underline;
+}
+#container #video-box .no-content,
+#container #comment-box .no-content {
+  height: 50px;
+  line-height: 50px;
+}
+#container #video-box textarea,
+#container #comment-box textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: height 0.4s, width 0.4s;
+  -moz-transition: height 0.4s, width 0.4s;
+  -ms-transition: height 0.4s, width 0.4s;
+  -o-transition: height 0.4s, width 0.4s;
+  border-width: 0px;
+  border-bottom: 1px solid #CCC;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  padding: 15px;
+  resize: none;
+  height: 50px;
+  outline: none;
+}
+#container #video-box textarea:focus,
+#container #comment-box textarea:focus {
+  height: 90px;
+}
+#container #video-box textarea:focus + .comment-submit,
+#container #comment-box textarea:focus + .comment-submit {
+  height: 30px;
+}
+#container #video-box .comment-submit,
+#container #comment-box .comment-submit {
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  -ms-transition: height 0.4s;
+  -o-transition: height 0.4s;
+  width: 50%;
+  height: 0px;
+  color: #fefefe;
+  text-align: center;
+  font-size: 1.3em;
+  font-variant: small-caps;
+  background: #007aff;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#container #video-box .comment,
+#container #comment-box .comment {
+  padding: 15px 15px 0px;
+}
+#container #video-box .comment:last-child,
+#container #comment-box .comment:last-child {
+  padding-bottom: 20px;
+}
+#container #video-box .comment .comment,
+#container #comment-box .comment .comment {
+  padding: 20px 0px 0px 30px;
+}
+#container #video-box .comment .comment-info,
+#container #comment-box .comment .comment-info {
+  font-size: 0.9em;
+  vertical-align: top;
+  line-height: 16px;
+}
+#container #video-box .comment .comment-info .upvote,
+#container #comment-box .comment .comment-info .upvote,
+#container #video-box .comment .comment-info .downvote,
+#container #comment-box .comment .comment-info .downvote {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  opacity: 0.2;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+}
+#container #video-box .comment .comment-info a,
+#container #comment-box .comment .comment-info a {
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  color: rgba(0, 122, 255, 0.5);
+  text-decoration: none;
+}
+#container #video-box .comment .comment-info a:hover,
+#container #comment-box .comment .comment-info a:hover {
+  text-decoration: underline;
+}
+#container #video-box .comment .comment-info span,
+#container #comment-box .comment .comment-info span {
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  color: rgba(17, 17, 17, 0.5);
+  margin: 0px 10px;
+}
+#container #video-box .comment .comment-info .upvote,
+#container #comment-box .comment .comment-info .upvote {
+  background-image: url('../images/thumbup.png');
+}
+#container #video-box .comment .comment-info .downvote,
+#container #comment-box .comment .comment-info .downvote {
+  background-image: url('../images/thumbdown.png');
+  margin-left: 10px;
+}
+#container #video-box .comment .comment-info:hover .upvote,
+#container #comment-box .comment .comment-info:hover .upvote,
+#container #video-box .comment .comment-info:hover .downvote,
+#container #comment-box .comment .comment-info:hover .downvote {
+  opacity: 0.5;
+}
+#container #video-box .comment .comment-info:hover a,
+#container #comment-box .comment .comment-info:hover a {
+  color: #007aff;
+}
+#container #video-box .comment .comment-info:hover span,
+#container #comment-box .comment .comment-info:hover span {
+  color: #111111;
+}

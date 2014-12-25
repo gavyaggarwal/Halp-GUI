@@ -1,0 +1,39 @@
+- var video = {"id":428348943,"title":"General Relativity, Special Relativity, and Gravitational Waves","topic":"Physics","author":"ProfessorBrown","viewers":2342,"thumbnail":"http://i.kinja-img.com/gawker-media/image/upload/s--wkHbNfCf--/191sbt8dnldc8jpg.jpg","videoURL":"video.html","topicURL":"topic/physics","authorURL":"user/professor_brown","comments":[{"id":239,"author":"John Doe","authorURL":"user.html","time":"3 days ago","type":"comment","message":"This video changed my life. Thanks!","comments":[{"id":533,"author":"Mike Brown","authorURL":"user.html","time":"2 days ago","type":"comment","message":"I agree! Halp is revolutionary. (This is a second level comment.)","comments":[{"id":234,"author":"Billy Jones","authorURL":"user.html","time":"1 day ago","type":"comment","message":"This is a third level comment also agreeing that Halp is one of the best things ever."}]}]},{"id":22439,"author":"Gavy","authorURL":"user.html","time":"25 minutes ago","type":"comment","message":"I really liked how you explained how to set up the environment."},{"id":2239,"author":"Confused Student","authorURL":"user.html","time":"4 hours ago","type":"comment","message":"Can you please explain the equations at the end of the video?","comments":[{"id":2349,"author":"ProfessorBrown","authorURL":"user.html","time":"2 hours ago","type":"comment","message":"The final equation is derived from solving the kinetic energy equation and substituting into the potential energy equation."},{"id":2249,"author":"ProfessorBrown","authorURL":"user.html","time":"2 hours ago","type":"comment","message":"You can use this equation to quickly determine the final and initial conditions of the particle."}]},{"id":23,"author":"Joe","authorURL":"user.html","time":"3 days ago","type":"comment","message":"I love Halp!"}]};
+
+mixin video-comments(comments)
+  each c in comments
+    .comment
+      .comment-info
+        a(href=c.authorURL)= c.author
+        span= c.time
+        .upvote
+        .downvote
+      span= c.message
+      if c.comments && c.comments.length
+        +video-comments(c.comments)
+
+doctype html
+html(lang="en")
+  head
+    title= video.title + " on Halp"
+    link(href='css/video.css', rel='stylesheet', type='text/css')
+  body
+    include header.jade
+    #container
+      #video-box
+        video#player(autoplay)
+          source(src="http://html5demos.com/assets/dizzy.mp4")
+          source(src="http://html5demos.com/assets/dizzy.ogv")
+          .error Halp uses a technology called WebRTC, which is supported only by modern browsers, to stream videos. Try using the latest version of Google Chrome, Firefox, or Opera and try again.
+        h2= video.title
+        h3 By 
+          a(href=video.authorURL)= video.author
+        h3 #{video.viewers} Viewers
+      #comment-box
+        textarea(placeholder='Leave a Comment')
+        .comment-submit Post
+        if video.comments && video.comments.length
+          +video-comments(video.comments)
+        else
+          .no-content There are no comments on this video.
+    include footer.jade
