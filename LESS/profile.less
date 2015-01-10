@@ -1,0 +1,200 @@
+@import "core";
+
+//Related to profile
+#container {
+  #user-box {
+    background: #FFF;
+    border: 1px solid #CCC;
+    margin: 50px auto;
+    padding: 0px;
+    text-align:left;
+    width:80%; //TODO: Add media queries for greater width on smaller screens
+    .flex;
+    img {
+      height:300px;
+      max-width:50%;
+      padding:0px;
+      margin:0px;
+    }
+  }
+  #video-box {
+    background: #FFF;
+    border: 1px solid #CCC;
+    margin: 50px auto;
+    padding: 0px;
+    text-align:left;
+    width:80%; //TODO: Add media queries for greater width on smaller screens
+    h2 {
+      font-weight:300;
+      font-size: 1.4em;
+      margin:0px;
+      padding:10px;
+    }
+    h3 {
+      font-weight:300;
+      font-size: 1.1em;
+      margin:0px;
+      padding:0px 10px 10px 10px;
+      a {
+        text-decoration:none;
+        color:@color;
+        &:hover {
+          text-decoration:underline;
+        }
+      }
+    }
+    .no-content {
+      height:50px;
+      line-height:50px;
+    }
+    textarea {
+      .boxsizing;
+      @transition: height 0.4s, width 0.4s;
+      .transition(@transition);
+      border-width:0px;
+      border-bottom:1px solid #CCC;
+      font-family: 'Lato', sans-serif;
+      font-size:1em;
+      width:100%;
+      padding:15px;
+      resize: none;
+      height:50px;
+      outline:none;
+      &:focus {
+        height:90px;
+      }
+      &:focus + .comment-submit {
+        height:30px;
+      }
+    }
+    .comment-submit {
+      .transition(height 0.4s);
+      width:50%;
+      height:0px;
+      color:@light-color;
+      text-align:center;
+      font-size:1.3em;
+      font-variant:small-caps;
+      background:@theme;
+      margin:auto;
+      cursor:pointer;
+      border-radius:5px;
+    }
+    .comment {
+      padding:15px 15px 0px;
+      &:last-child {
+        padding-bottom:20px;
+      }
+      .comment {
+        padding:20px 0px 0px 30px;
+      }
+      .comment-info {
+        font-size:0.9em;
+        vertical-align:top;
+        line-height:16px;
+        .upvote, .downvote {
+          height:16px;
+          width:16px;
+          display:inline-block;
+          opacity:0.2;
+          cursor:pointer;
+          vertical-align:middle;
+          .transition(opacity 0.4s);
+        }
+        a {
+          .transition(color 0.4s);
+          color:fadeout(@theme, 50%);
+          text-decoration:none;
+          &:hover {
+            text-decoration:underline;
+          }
+        }
+        span {
+          .transition(color 0.4s);
+          color:fadeout(@color, 50%);
+          margin:0px 10px;
+        }
+        .upvote {
+          background-image:url('../images/thumbup.png');
+        }
+        .downvote {
+          background-image:url('../images/thumbdown.png');
+          margin-left:10px;
+        }
+        &:hover {
+          .upvote, .downvote {
+            opacity:0.5;
+          }
+          a {
+            color:@theme;
+          }
+          span {
+            color:@color;
+          }
+        }
+      }
+    }
+    /*.suggestions-video {
+      .transition(background-color 0.4s);
+      vertical-align:top;
+      width:300px;
+      height:200px;
+      display:inline-block;
+      margin:18px 4px 0px 4px;
+      border:1px solid #EEE;
+      overflow:hidden;
+      .thumbnail {
+        background-color:#000;
+        width:100%;
+        font-size:0px;
+        display:inline-block;
+        img {
+          .transition(opacity 0.4s);
+          width:100%;
+          opacity:0.5;
+          height:150px;
+        }
+      }
+      .title {
+        display:inline-block;
+        width:290px;
+        .ellipsis;
+      }
+      a {
+        text-decoration:none;
+        color:@color;
+        .transition(color 0.4s);
+        &:hover {
+          text-decoration:underline;
+        }
+      }
+      .details {
+        display:inline-block;
+        width:290px;
+        font-size:0.8em;
+        .ellipsis;
+        .separator {
+          background:lighten(@color, 20%);
+          width:4px;
+          height:4px;
+          display:inline-block;
+          margin:0px 5px;
+          border-radius:2px;
+          vertical-align:middle;
+        }
+      }
+      &:hover {
+        background-color:#FEFEFE;
+        .thumbnail img {
+          opacity:1.0;
+        }
+        a {
+          color:mix(@color, @theme, 40%);
+          &:hover {
+            color:@color;
+          }
+        }
+      }
+    }*/
+  }
+}

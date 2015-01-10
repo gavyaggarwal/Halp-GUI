@@ -1,0 +1,17 @@
+- var user = {"id":428348943,"name":"Jonathan White","thumbnail":"http://www.standupny.com/standupny/wp-content/uploads/2012/12/Joe-Matarese.jpeg","username":"ProfessorBrown","viewers":2342,"videoURL":"video.html","topicURL":"topic/physics","authorURL":"user/professor_brown","comments":[{"id":239,"author":"John Doe","authorURL":"user.html","time":"3 days ago","type":"comment","message":"This video changed my life. Thanks!","comments":[{"id":533,"author":"Mike Brown","authorURL":"user.html","time":"2 days ago","type":"comment","message":"I agree! Halp is revolutionary. (This is a second level comment.)","comments":[{"id":234,"author":"Billy Jones","authorURL":"user.html","time":"1 day ago","type":"comment","message":"This is a third level comment also agreeing that Halp is one of the best things ever."}]}]},{"id":22439,"author":"Gavy","authorURL":"user.html","time":"25 minutes ago","type":"comment","message":"I really liked how you explained how to set up the environment."},{"id":2239,"author":"Confused Student","authorURL":"user.html","time":"4 hours ago","type":"comment","message":"Can you please explain the equations at the end of the video?","comments":[{"id":2349,"author":"ProfessorBrown","authorURL":"user.html","time":"2 hours ago","type":"comment","message":"The final equation is derived from solving the kinetic energy equation and substituting into the potential energy equation."},{"id":2249,"author":"ProfessorBrown","authorURL":"user.html","time":"2 hours ago","type":"comment","message":"You can use this equation to quickly determine the final and initial conditions of the particle."}]},{"id":23,"author":"Joe","authorURL":"user.html","time":"3 days ago","type":"comment","message":"I love Halp!"}]};
+
+doctype html
+html(lang="en")
+  head
+    title= user.name + " on Halp"
+    link(href='css/profile.css', rel='stylesheet', type='text/css')
+  body
+    include header.jade
+    #container
+      #user-box
+        img(src=user.thumbnail)
+        #description
+          h2 #{user.name} (#{user.username})
+          h3 Topics: physics, math, chemistry
+          h3 324 Videos
+          h3 Boston, MA
