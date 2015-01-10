@@ -86,6 +86,15 @@ body {
   padding: 0px;
   margin: 0px;
 }
+#container #user-box #description {
+  margin-left: 10px;
+  padding: 10px 0px;
+}
+#container #user-box #description h2,
+#container #user-box #description h3,
+#container #user-box #description h4 {
+  margin: 3px;
+}
 #container #video-box {
   background: #FFF;
   border: 1px solid #CCC;
