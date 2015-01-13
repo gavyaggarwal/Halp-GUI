@@ -86,6 +86,14 @@ body {
   padding: 0px;
   margin: 0px;
 }
+#container #user-box a {
+  color: #111111;
+  text-decoration: none;
+  margin-left: 0.333em;
+}
+#container #user-box a:hover {
+  text-decoration: underline;
+}
 #container #user-box #description {
   margin-left: 10px;
   padding: 10px 0px;
