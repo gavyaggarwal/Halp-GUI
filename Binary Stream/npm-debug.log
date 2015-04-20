@@ -1,0 +1,84 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'binaryserver' ]
+2 info using npm@1.4.28
+3 info using node@v0.13.0-pre
+4 verbose config Skipping project config: /Users/gavyaggarwal/.npmrc. (matches userconfig)
+5 verbose cache add [ 'binaryserver', null ]
+6 verbose cache add name=undefined spec="binaryserver" args=["binaryserver",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'binaryserver',
+7 verbose parsed url   path: 'binaryserver',
+7 verbose parsed url   href: 'binaryserver' }
+8 silly lockFile 61c928af-binaryserver binaryserver
+9 verbose lock binaryserver /Users/gavyaggarwal/.npm/61c928af-binaryserver.lock
+10 silly lockFile 61c928af-binaryserver binaryserver
+11 silly lockFile 61c928af-binaryserver binaryserver
+12 verbose addNamed [ 'binaryserver', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile e801d4fe-binaryserver binaryserver@
+15 verbose lock binaryserver@ /Users/gavyaggarwal/.npm/e801d4fe-binaryserver.lock
+16 silly addNameRange { name: 'binaryserver', range: '*', hasData: false }
+17 verbose request where is /binaryserver
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 96d5e57db21ddcaa
+20 verbose url raw /binaryserver
+21 verbose url resolving [ 'https://registry.npmjs.org/', './binaryserver' ]
+22 verbose url resolved https://registry.npmjs.org/binaryserver
+23 verbose request where is https://registry.npmjs.org/binaryserver
+24 info trying registry request attempt 1 at 17:58:35
+25 http GET https://registry.npmjs.org/binaryserver
+26 http 404 https://registry.npmjs.org/binaryserver
+27 verbose headers { date: 'Sat, 18 Apr 2015 00:58:35 GMT',
+27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 verbose headers   'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '51',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   'x-served-by': 'cache-sjc3122-SJC',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1429318715.350129,VS0,VE90',
+27 verbose headers   connection: 'close' }
+28 silly registry.get cb [ 404,
+28 silly registry.get   { date: 'Sat, 18 Apr 2015 00:58:35 GMT',
+28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '51',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-sjc3122-SJC',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1429318715.350129,VS0,VE90',
+28 silly registry.get     connection: 'close' } ]
+29 silly lockFile e801d4fe-binaryserver binaryserver@
+30 silly lockFile e801d4fe-binaryserver binaryserver@
+31 error 404 404 Not Found: binaryserver
+31 error 404
+31 error 404 'binaryserver' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Darwin 14.3.0
+33 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "binaryserver"
+34 error cwd /Users/gavyaggarwal/Documents/Halp GUI/Binary Stream
+35 error node -v v0.13.0-pre
+36 error npm -v 1.4.28
+37 error code E404
+38 verbose exit [ 1, true ]

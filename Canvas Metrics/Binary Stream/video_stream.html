@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+var constraints = {audio: false, video: true};
+var video = document.querySelector('video');
+
+function successCallback(stream) {
+  window.stream = stream; // stream available to console
+  if (window.URL) {
+    video.src = window.URL.createObjectURL(stream);
+  } else {
+    video.src = stream;
+  }
+}
+
+function errorCallback(error){
+  console.log('navigator.getUserMedia error: ', error);
+}
+
+navigator.getUserMedia(constraints, successCallback, errorCallback);
+
+  </script>
+
+<title>getUserMedia</title>
+
+<style>
+
+video {
+  object-fit: cover;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <h1><a href="../index.html" title="simpl.info home page">simpl.info</a> getUserMedia</h1>
+
+  <video autoplay></video>
+
+  <p>The <code>MediaStream</code> object <code>stream</code> passed to the <code>getUserMedia()</code> callback in this demo is in global scope, so you can inspect it from the console.</p>
+
+  <p>For more information, see <a href="http://www.html5rocks.com/en/tutorials/getusermedia/intro/" title="Media capture article by Eric Bidelman on HTML5 Rocks">Capturing Audio &amp; Video in HTML5</a> on HTML5 Rocks.</p>
+
+  <a href="//github.com/samdutton/simpl/blob/master/getusermedia/index.html" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+</div>
+
+</body>
+</html>
